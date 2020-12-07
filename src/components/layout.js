@@ -15,6 +15,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import "./layout.css"
 
+// const extScript = require('../../myscript.js')
+
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {

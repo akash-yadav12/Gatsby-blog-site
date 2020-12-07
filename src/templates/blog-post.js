@@ -16,7 +16,7 @@ export default function Template({data}){
                 </div>
                 <footer class="blockquote-footer ml-auto p-4">by <cite title="Source Title">{post.frontmatter.author} on {post.frontmatter.date}</cite></footer>
             </div>
-            <Link to="/">Go Back</Link>
+            <Link to="/">View All Blogs</Link>
         </Layout>
     )
 }
@@ -29,7 +29,7 @@ export const postQuery = graphql`
                 path
                 title
                 author
-                date
+                date(formatString: "MMM DD, YYYY")
             }
         }
     }

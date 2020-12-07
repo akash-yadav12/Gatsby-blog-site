@@ -5,6 +5,9 @@ import SEO from "../components/seo"
 
 import Layout from "../components/layout"
 
+// const extScript = require('../../myscript.js')
+
+
 const BlogPage = ({data}) => (
   <Layout>
     <SEO title="Home" />
@@ -40,7 +43,7 @@ export const pageQuery = graphql`
                     frontmatter {
                         path
                         title
-                        date
+                        date(formatString: "MMM DD,YYYY")
                         author
                     }
                     excerpt
