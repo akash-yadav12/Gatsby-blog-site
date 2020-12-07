@@ -8,7 +8,7 @@ import Layout from "../components/layout"
 const BlogPage = ({data}) => (
   <Layout>
     <SEO title="Home" />
-    <div>
+    <div style={{minHeight:`90vh`}}>
         {data.allMarkdownRemark.edges.map(post => (
             <div className="cards" key = { post.node.id} 
                 style={{
