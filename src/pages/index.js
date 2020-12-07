@@ -1,22 +1,55 @@
 import React from "react"
-import { Link } from "gatsby"
-
-import Layout from "../components/layout"
-import Image from "../components/image"
+import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
+
+import Layout from "../components/layout"
+
+const BlogPage = ({data}) => (
   <Layout>
     <SEO title="Home" />
-    <h1>Welcome to my website</h1>
-    <p>This is the sample site for the gatsby crash course</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div>
+        {data.allMarkdownRemark.edges.map(post => (
+            <div className="cards" key = { post.node.id} 
+                style={{
+                    border:`1px solid rgba(0,0,0,.2)`,
+                    boxShadow:`1px 1px 2px rgba(0,0,0,.4)`,
+                    margin: `25px auto`,
+                    padding: `20px 40px`
+                    
+                }}
+            >
+                <h1 className="Font-weight-bold">{post.node.frontmatter.title}</h1>
+                <p className="text-truncate">{post.node.excerpt}</p>
+                <small>Posted by {post.node.frontmatter.author} on {post.node.frontmatter.date}</small>
+                <br/>
+                <br/>
+                <Link to={post.node.frontmatter.path}>Read more</Link>
+            </div>
+        ))}
     </div>
-    {/* <Link to="/page-2/">Go to page 2</Link> <br /> */}
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   </Layout>
 )
 
-export default IndexPage
+export const pageQuery = graphql`
+    query BlogPosts {
+        allMarkdownRemark(sort: {fields: [frontmatter___date],order:DESC}){
+            edges {
+                node {
+                    id
+                    frontmatter {
+                        path
+                        title
+                        date
+                        author
+                    }
+                    excerpt
+                }
+            }
+        }
+    }
+`
+export default BlogPage
+
+
+
