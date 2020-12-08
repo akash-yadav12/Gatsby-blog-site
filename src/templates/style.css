@@ -1,0 +1,13 @@
+#article{
+    min-height:90vh;
+    width: 90%;
+    margin: auto;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    background: #fff;
+}
+
+@media(max-width:600px){
+    #article{
+        width: 97%;
+    }
+}

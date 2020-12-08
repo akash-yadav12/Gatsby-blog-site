@@ -1,13 +1,14 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
+import './style.css'
 
 export default function Template({data}){
     const post = data.markdownRemark
 
     return (
         <Layout>
-            <div className="card" style={{minHeight:`90vh`, width:`90%`,margin:`auto`,boxShadow: `0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05)`,background:`#fff`}}>
+            <div className="card" id="article">
                 <div className="card-header">
                     <h2 className="text-center">{post.frontmatter.title}</h2>
                 </div>
