@@ -5,21 +5,17 @@ import SEO from "../components/seo"
 
 import Layout from "../components/layout"
 
+import "./index.css"
 // const extScript = require('../../myscript.js')
 
 
 const BlogPage = ({data}) => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Technology" />
     <div style={{minHeight:`90vh`}}>
         {data.allMarkdownRemark.edges.map(post => (
-            <div className="cards" key = { post.node.id} 
+            <div className="cards" id="data-card" key = { post.node.id} 
                 style={{
-                    border:`1px solid rgba(0,0,0,.2)`,
-                    boxShadow:`1px 1px 2px rgba(0,0,0,.4)`,
-                    margin: `25px auto`,
-                    padding: `20px 40px`
-                    
                 }}
             >
                 <h1 className="Font-weight-bold">{post.node.frontmatter.title}</h1>
