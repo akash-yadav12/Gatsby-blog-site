@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
-
+import AdSense from 'react-adsense';    
 
 import Layout from "../components/layout"
 
@@ -27,6 +27,14 @@ const BlogPage = ({data}) => (
             </div>
         ))}
     </div>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <AdSense.Google
+        client='ca-pub-9340385867635764'
+        slot='1349180465'
+        style={{ display: 'block' }}
+        layout='in-article'
+        format='fluid'
+    />
   </Layout>
 )
 
