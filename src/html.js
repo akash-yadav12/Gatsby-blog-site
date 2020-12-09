@@ -21,8 +21,9 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-      </body>
+
       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      </body>
     </html>
   )
 }

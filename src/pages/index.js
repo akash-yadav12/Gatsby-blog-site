@@ -2,16 +2,20 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
 import AdSense from 'react-adsense';    
+import Helmet from 'react-helmet';
+import Layout from "../components/layout";
 
-import Layout from "../components/layout"
-
-import "./index.css"
-// const extScript = require('../../myscript.js')
+import "./index.css";
 
 
 const BlogPage = ({data}) => (
   <Layout>
-    {/* <SEO title="Technology" /> */}
+    <Helmet>
+        <meta property="og:image" content=""/>
+        <meta property="og:locale" content=""/>
+        <link rel="canonical" href="{data.site.siteMetadata.url}"/>
+    </Helmet>
+    <SEO title="Blogs" />
     <div style={{minHeight:`90vh`}}>
         {data.allMarkdownRemark.edges.map(post => (
             <div className="cards" id="data-card" key = { post.node.id} 
@@ -27,8 +31,6 @@ const BlogPage = ({data}) => (
             </div>
         ))}
     </div>
-    {/* <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> */}
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <AdSense.Google
         client='ca-pub-9340385867635764'
         slot='4055218949'
@@ -55,8 +57,21 @@ export const pageQuery = graphql`
                 }
             }
         }
+        site{
+            siteMetadata{
+                title
+                description
+                keywords
+                url
+                author
+            }
+        }
     }
 `
+
+
+  
+
 export default BlogPage
 
 

@@ -1,13 +1,24 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
-import './style.css'
+import './style.css';
+import Helmet from 'react-helmet';
+import SEO from '../components/seo';
 
 export default function Template({data}){
     const post = data.markdownRemark
 
     return (
         <Layout>
+            <SEO title= {post.frontmatter.title}/>
+            <Helmet>
+                <meta property="og:title" content={post.frontmatter.title}/>
+                <meta property="og:type" content="website"/>
+                <meta property="og:image" content=""/>
+                <meta property="og:locale" content=""/>
+                <meta property="og:url" content={post.frontmatter.path}/>
+                <link rel="canonical" href={post.frontmatter.path}/>
+            </Helmet>
             <div className="card" id="article">
                 <div className="card-header">
                     <h2 className="text-center">{post.frontmatter.title}</h2>
@@ -17,7 +28,6 @@ export default function Template({data}){
                 </div>
                 <footer class="blockquote-footer ml-auto p-4">by <cite title="Source Title">{post.frontmatter.author} on {post.frontmatter.date}</cite></footer>
             </div>
-            {/* <Link to="/">View All Blogs</Link> */}
         </Layout>
     )
 }

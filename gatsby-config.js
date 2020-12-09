@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `Developer's Solution`,
-    description: `Get solution of problems faced during the programming, web development journey`,
-    author: `@Akash`,
+    description: `Get solution of the problems faced during your programming and web development journey`,
+    keywords: `Html5, CSS3, javscript, nodejs, express, react,angular, web development,Heroku,deploy, blog, gatsby, nettlify, fullstack`,
+    url: `https://technicalstuff.netlify.app`,
+    author: `@Akash`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
