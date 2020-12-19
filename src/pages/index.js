@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import AdSense from 'react-adsense';    
 import Helmet from 'react-helmet';
 import Layout from "../components/layout";
+import Img from 'gatsby-image';
 
 import "./index.css";
 
@@ -23,6 +24,7 @@ const BlogPage = ({data}) => (
                 }}
             >
                 <h1 className="Font-weight-bold">{post.node.frontmatter.title}</h1>
+                <Img fluid={post.node.frontmatter.featuredImage.childImageSharp.fluid}  style={{ width: `400px`, maxWidth:`80%`, position:`relative`, left:`50%`, transform:`translateX(-50%)`, margin:`20px 0`}}/>
                 <p className="text-truncate">{post.node.excerpt}</p>
                 <small>Posted by {post.node.frontmatter.author} on {post.node.frontmatter.date}</small>
                 <br/>
@@ -52,6 +54,13 @@ export const pageQuery = graphql`
                         title
                         date(formatString: "MMM DD,YYYY")
                         author
+                        featuredImage {
+                            childImageSharp {
+                              fluid(maxWidth: 400) {
+                                ...GatsbyImageSharpFluid
+                              }
+                            }
+                        }
                     }
                     excerpt
                 }

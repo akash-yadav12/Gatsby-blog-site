@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import {images} from "../../blog-posts/2020-12-06-post-04/images"
 
 
 import "./layout.css"
