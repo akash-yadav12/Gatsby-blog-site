@@ -1,7 +1,7 @@
 ---
 path: "/post-one"
 date: "2020-12-06"
-title: "About The Contents that will be covered on this blog site"
+title: "Contents that will be posted on this blog site"
 author: "Akash Yadav"
 featuredImage: "./about.jpg"
 ---
