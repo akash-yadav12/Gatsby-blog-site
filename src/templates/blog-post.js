@@ -4,6 +4,7 @@ import Layout from '../components/layout';
 import './style.css';
 import Helmet from 'react-helmet';
 import SEO from '../components/seo';
+import Img from 'gatsby-image';
 
 export default function Template({data}){
     const post = data.markdownRemark
@@ -23,6 +24,7 @@ export default function Template({data}){
                 <div className="card-header">
                     <h2 className="text-center">{post.frontmatter.title}</h2>
                 </div>
+                <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} />
                 <div className="card-body">
                     <div dangerouslySetInnerHTML = {{ __html: post.html }}></div>
                 </div>
@@ -41,6 +43,13 @@ export const postQuery = graphql`
                 title
                 author
                 date(formatString: "MMM DD, YYYY")
+                featuredImage{
+                    childImageSharp {
+                        fluid(maxWidth: 400) {
+                          ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
             }
         }
     }
