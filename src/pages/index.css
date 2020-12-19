@@ -1,3 +1,6 @@
+body{
+    box-sizing: border-box;
+}
 #data-card{
     border-radius: 4px;
     background: #fff;
@@ -10,10 +13,63 @@
     box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 }
 
-
+#search{
+    position: absolute;
+    top: 10px;
+    right: 2%;
+    background-color: #fcfcfc;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 0 2px 4px 4px rgba(0,0,0,.5);
+    transition: all .2s ease-in;
+}
+#search input{
+    margin: 0 4px;
+    border: none;
+    background-color: transparent;
+    border-right: 2px solid #888;
+    transition: all .2s ease-in;
+}
+#search .icon{
+    cursor: pointer;
+    padding: 2px;
+}
 
 @media (max-width:600px){
     #data-card{
         margin: 25px auto;
+    }
+    #search{
+        border-radius: 50%;
+        overflow: hidden;
+        transition: all .2s ease-in-out;
+    }
+    #search input{
+        border-right: none;
+        width: 0;
+        display: block;
+        transition:all .2s ease-in-out;
+    }
+    #search .icon .fa-search{
+        position: relative;
+        left: 30%;
+        margin-top: 2px;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        padding: 3px;
+    }
+    #search:hover input,
+    #search:focus input{
+        width: 100%;
+        border-right: 2px solid #888;
+    }
+    #search:hover,
+    #search:focus{
+        border-radius: 40px;
     }
 }

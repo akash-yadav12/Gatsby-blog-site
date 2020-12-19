@@ -7,8 +7,6 @@ featuredImage: "./herokuImg.png"
 ---
 ### In this article we will learn to deploy our website on Heroku using five simple steps
 
-![](herokuImg.png)
-
 **Heroku** is a cloud platform as a service (PaaS) supporting several programming Languages. One of the first cloud platforms. Heroku has been in development since June 2007, when it supported only Ruby programming langauge, but now supports Java, Nodejs, Scala, Clojure, Python, PHP, and GO. **Heroku** is the free hosting platform for developers which is the best part of **Heroku**. One can easily deploy their static website as well as dynamic webites(using some ad-ons) on **Heroku**
 
 **Step 1: First You'll need Heroku-cli on your device(Heroku-cli installation),**
