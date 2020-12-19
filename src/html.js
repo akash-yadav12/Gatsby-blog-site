@@ -22,7 +22,7 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
 
-      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script data-ad-client="ca-pub-9340385867635764" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       </body>
     </html>
   )
