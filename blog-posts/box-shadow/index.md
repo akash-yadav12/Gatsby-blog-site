@@ -3,6 +3,7 @@ path: "/Box-shadow-CSS"
 date: "2020-12-18"
 title: "Understanding Box shadow property in CSS"
 author: "Akash Yadav"
+tags: "CSS, Box-shadow, Stylesheets, DOM-Manipulation"
 featuredImage: "./box-shadow.jpg"
 ---
 ### This article might help in understanding the concept of one of the most confusing CSS property **box-shadow**

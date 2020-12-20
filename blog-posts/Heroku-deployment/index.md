@@ -3,6 +3,7 @@ path: "/Deploy-To-Heroku"
 date: "2020-12-07"
 title: "Deploying a Website On Heroku in five simple steps"
 author: "Akash Yadav"
+tags: "Heroku, Deployment, Heroku-cli"
 featuredImage: "./herokuImg.png"
 ---
 ### In this article we will learn to deploy our website on Heroku using five simple steps

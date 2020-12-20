@@ -43,6 +43,13 @@ const BlogPage = ({data}) => {
                     <h1 className="Font-weight-bold">{post.node.frontmatter.title}</h1>
 
                     <p className="text-truncate">{post.node.excerpt}</p>
+                    <hr/>
+                    <div id="tag-container">
+                        {post.node.frontmatter.tags.split(",").map((tag)=>(
+                            <div id="tag">{tag}</div>
+                        ))}
+                    </div>
+                    <hr/>
                     <small>Posted by {post.node.frontmatter.author} on {post.node.frontmatter.date}</small>
                     <br/>
                     <br/>
@@ -72,6 +79,7 @@ export const pageQuery = graphql`
                         title
                         date(formatString: "MMM DD,YYYY")
                         author
+                        tags
                         featuredImage {
                             childImageSharp {
                               fluid(maxWidth: 400) {

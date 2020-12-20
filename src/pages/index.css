@@ -38,7 +38,26 @@ body{
     padding: 2px;
 }
 
-@media (max-width:600px){
+#tag-container{
+    margin-top: -12px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+#tag-container #tag{
+    font-size: .8rem;
+    background-color: #0af;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding: 10px auto;
+    max-height: 30px;
+    margin: 5px;
+    color: white;
+    box-shadow: 1px 1px 2px 1px rgba(0,0,0,.2);
+}
+
+@media (max-width:768px){
     #data-card{
         margin: 25px auto;
     }
@@ -71,5 +90,8 @@ body{
     #search:hover,
     #search:focus{
         border-radius: 40px;
+    }
+    #tag-container{
+        flex-wrap: wrap;
     }
 }
