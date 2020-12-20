@@ -8,7 +8,6 @@ import Img from 'gatsby-image';
 
 import "./index.css";
 
-// let some = { data }
 
 const BlogPage = ({data}) => {
 
@@ -40,8 +39,9 @@ const BlogPage = ({data}) => {
                     style={{
                     }}
                 >
+                    <Img fluid={post.node.frontmatter.featuredImage.childImageSharp.fluid}  style={{ width: `400px`, maxWidth:`80%`, position:`relative`, left:`50%`, transform:`translateX(-50%)`, margin:`20px 0`, boxShadow:`2px 2px 8px 2px rgba(0,0,0,.4)`}}/>
                     <h1 className="Font-weight-bold">{post.node.frontmatter.title}</h1>
-                    <Img fluid={post.node.frontmatter.featuredImage.childImageSharp.fluid}  style={{ width: `400px`, maxWidth:`80%`, position:`relative`, left:`50%`, transform:`translateX(-50%)`, margin:`20px 0`}}/>
+
                     <p className="text-truncate">{post.node.excerpt}</p>
                     <small>Posted by {post.node.frontmatter.author} on {post.node.frontmatter.date}</small>
                     <br/>
