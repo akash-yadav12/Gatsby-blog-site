@@ -31,7 +31,7 @@ const BlogPage = ({data}) => {
         <SEO title="Blogs" />
         <div id="search" className="">
             <input type="text" placeholder="Search" onChange={(event) =>{ search(event)}} />
-            <div className="icon"> <i class="fas fa-search"></i> </div>
+            <div className="icon"> <i className="fas fa-search"></i> </div>
         </div>
         <div style={{minHeight:`90vh`}}>
             {allMarkdownRemark.map(post => (
@@ -46,7 +46,7 @@ const BlogPage = ({data}) => {
                     <hr/>
                     <div id="tag-container">
                         {post.node.frontmatter.tags.split(",").map((tag)=>(
-                            <div id="tag">{tag}</div>
+                            <div key={tag} id="tag">#{tag}</div>
                         ))}
                     </div>
                     <hr/>

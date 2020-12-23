@@ -15,14 +15,14 @@ body{
 
 #search{
     position: absolute;
-    top: 10px;
+    top: 12px;
     right: 2%;
     background-color: #fcfcfc;
-    border-radius: 40px;
+    border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding: 3px;
     box-shadow: 0 2px 4px 4px rgba(0,0,0,.5);
     transition: all .2s ease-in;
 }
@@ -31,12 +31,13 @@ body{
     outline:none;
     border: none;
     background-color: transparent;
-    border-right: 2px solid #888;
+    border-right: 2px solid #ccc;
     transition: all .2s ease-in;
 }
 #search .icon{
     cursor: pointer;
     padding: 2px;
+    color: #666;
 }
 
 #tag-container{
@@ -91,7 +92,7 @@ body{
     }
     #search:hover,
     #search:focus{
-        border-radius: 40px;
+        border-radius: 50px;
     }
     #tag-container{
         flex-wrap: wrap;
