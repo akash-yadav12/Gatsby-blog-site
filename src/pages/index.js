@@ -39,17 +39,20 @@ const BlogPage = ({data}) => {
                     style={{
                     }}
                 >
-                    <Img fluid={post.node.frontmatter.featuredImage.childImageSharp.fluid}  style={{ width: `400px`, maxWidth:`80%`, position:`relative`, left:`50%`, transform:`translateX(-50%)`, margin:`20px 0`, boxShadow:`2px 2px 8px 2px rgba(0,0,0,.4)`}}/>
-                    <h1 className="Font-weight-bold">{post.node.frontmatter.title}</h1>
+                    <h3 className="Font-weight-bold text-center">{post.node.frontmatter.title}</h3>
+
+                    <Img fluid={post.node.frontmatter.featuredImage.childImageSharp.fluid}  className="display-thumbnail" />
 
                     <p className="text-truncate">{post.node.excerpt}</p>
-                    <hr/>
+                    {/* <hr/> */}
                     <div id="tag-container">
+                        <div>
                         {post.node.frontmatter.tags.split(",").map((tag)=>(
                             <div key={tag} id="tag">#{tag}</div>
                         ))}
+                        </div>
                     </div>
-                    <hr/>
+                    {/* <hr/> */}
                     <small>Posted by {post.node.frontmatter.author} on {post.node.frontmatter.date}</small>
                     <br/>
                     <br/>

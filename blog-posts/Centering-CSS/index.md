@@ -6,7 +6,7 @@ author: "Akash Yadav"
 tags: "CSS, Flex-box, Grid, Position"
 featuredImage: "./index.jpg"
 ---
-In this article, Let us understand how to perfectly center a div element using CSS in four simple ways.
+In this article, Let us understand how to perfectly center a div element using CSS in four simple ways (using Flex-box, grid, position/transform, Margins).
 
 ### 1) Flex-Box
 By Selecting a Parent element of a div which we want to Center, we can simply use Flex-box to center the div element. We First need to apply Display of flex to the parent element and then apply justify-content: center and align-items: center. That's it, by doing so the Div element will be perfectly centered. For eg,

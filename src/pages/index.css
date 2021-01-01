@@ -43,21 +43,28 @@ body{
 #tag-container{
     margin-top: -12px;
     display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 10px;
+    justify-content: center;
+    
 }
 #tag-container #tag{
     font-size: .8rem;
     background-color: #0af;
     border-radius: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 6px;
-    padding-bottom: 6px ;
+    display: inline-block;
+    padding: .4em .6em;
     max-height: 30px;
     margin: 5px;
     color: white;
     box-shadow: 1px 1px 2px 1px rgba(0,0,0,.2);
+}
+.display-thumbnail{
+    width: 400px;
+    max-width:100%;
+    position:relative;
+    left:50%;
+    transform:translateX(-50%);
+    margin:20px 0;
+    box-shadow:2px 2px 8px 2px rgba(0,0,0,.4);
 }
 
 @media (max-width:768px){
