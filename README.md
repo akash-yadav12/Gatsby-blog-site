@@ -1,5 +1,3 @@
-Certainly! Here’s the entire content in one markdown file for easy copy-pasting:
-
 # Personal Blog Website
 
 A personal blog website focused on topics such as **Computer Science, Programming,** and **Web Development**. The site is designed to be simple, fast, and responsive, with content rendered dynamically from markdown files.
@@ -51,6 +49,3 @@ Contributions are welcome! Feel free to fork the project, create a feature branc
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
-
-This single markdown block includes all the necessary details to make your `README.md` file complete. Just copy the entire block and paste it into your `README.md` file. Let me know if you need further customization!
